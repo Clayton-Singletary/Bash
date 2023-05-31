@@ -1,0 +1,26 @@
+ctrl+p
+ctrl+n 
+ctrl+u
+ctrl+l
+
+history (or use history) !
+
+man bash (or)
+
+***********ExplainShell.com*************
+
+curl cht.sh/<command>
+----------------------------------------------------------------------------------------------------------------------
+order of ops:
+  redirection (>)
+  alias 
+  parameters,
+  shell functions
+  built in commands
+  hash tables
+  path vriable
+  Error
+----------------------------------------------------------------------------------------------------------------------
+Brace Expansion
+  
+  

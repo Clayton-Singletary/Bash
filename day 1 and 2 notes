@@ -1,0 +1,42 @@
+awk       *****compares patterens*****
+awk'{print}' menu.txt <prints all lines like the cat command>
+awk '/latte/ {print}' menu.txt <prints only lines with the pattern provided>
+awk '{print $1,$4}' coffeeshop.txt <prints only the 1st and 4th objects in a line delimited by white space>
+tail /etc/passwd |awk -F: '{print $NF}' <provides the last fields of the last ten of the etc/passwd file>
+awk 'NR==3, NR==7 {print NR,$0}' coffeshop.txt <prints the line numbers provided ie 3-7>
+
+sort      *****sorts shit*****
+sort abc.txt <sorts alphanumerically>
+sort -o numbsandletters.txt abc.txt <sorts and makes a newfile with the results> <// to append?>
+sort -k 2 coffeeshop.txt <sorts by second field in this case>
+sort -u coffeeshop.txt <removes duplicates>
+sort -n numb.txt <sorts by numerical value>
+sort -r numb.txt <sorts in reverse order>
+
+sed       *****does not change file if you want changes to stay make a new file and redirect output*****
+sed 's/tea/coffee/' beststuff.txt <replaces tea with coffee once per line>
+sed 's/tea/coffee/g' beststuff.txt <replaces all occurences of tea with coffee in a .txt file>
+sed 's/tea/coffee/2' beststuff.txt <replaces the second ocurence of tea in every line>
+sed '5 s/crazy/coffee/' beststuff.txt <replaces first occurence of crazy in the 5th row>
+sed '6,7 s/tea/coffee/g' beststuff.txt <replaces every occurence of tea in lines 6 and 7>
+
+uniq  *****sort it first for better results <ie: sort | uniq>*****
+uniq -c coffeshop.txt <counts the number of repeated lines for each line that gets repeated>
+uniq -d coffeeshop.txt <shows duplicated lines>
+uniq -D coffeshop.txt <shows all duplicates>
+uniq -c -i coffeeshop.txt <-i makes this case insensitive>
+
+conditionals
+<student guide has list of conditionals>
+
+scripts 
+chmod +x <script>
+
+aliases     *****temporary but can be made perm by placing in your profile*****
+alias = <name>=<command>      <this makes an alias>
+alias -p      <shows list of aliases>
+unalias <name>      <removes alias of provided name>
+
+command substitution        *****temp unless placed in profile*****
+A=$(tail /etc/passwd) <sets a command to a variable for faster use in this case variable is $A>
+echo $A <this uses the above variable>

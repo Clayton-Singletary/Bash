@@ -1,0 +1,56 @@
+parameters(variables)
+
+var_a="Hellow World" *****NO SPACES ALLOWED*****
+echo $var_a *****MUST USE $ TO REFERENCE A VARIABLE*****
+_________________________________________________________________________________________________________
+special parameters (built-in variables)
+
+$<Number> = positional parameter
+$0 = name of a script
+$# = represents number of arguments passed
+$* = gives all arguments passed
+$! = pid of last background running process
+$? = previous command
+$_ = last argument provided
+$$ = pid of current shell
+$@ = treats all paameters as an array (like $*)
+$- = flags that are set
+_________________________________________________________________________________________________________
+functions
+
+myfunc()
+{                              *****declared function*****
+    echo Hello i am a function
+    #this is a comment in my function
+}
+---------------------------------------------------------------------------------------------------------
+#!/bin/bash                       *****this is a script of a function to be called later as a script*****
+
+function getuser90                
+{
+    echo "Make a choice [1, 2, 3]:"
+    read userchoice
+    case $userchoice in
+        (1) echo one ;;
+        (2) echo two ;;
+        (3) echo three ;;
+        (*) echo other ;;
+    esac
+}
+getuser
+_________________________________________________________________________________________________________
+variable substitution
+
+name="John"
+echo $name     ****prints "John"****
+
+name="John"
+echo "My name is $name"    ****prints "My name is John"****
+
+name="John"
+echo"My name is ${name}ny5"    ****prints "My name is Johnny5"
+
+name="John"
+echo "My name is ${name:0:2}"    ****prints "My name is Jo"****
+_________________________________________________________________________________________________________
+activities 11-15

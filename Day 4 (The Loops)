@@ -1,0 +1,32 @@
+For Loops:          ****for each item in list****
+
+for $var in {list,or comma separated items};
+do
+  commands
+done
+___________________________________________________________________________________________
+
+While Loops:        ****while a condition is true****
+
+while [ tests ]
+do
+  commands
+done
+___________________________________________________________________________________________
+
+Until Loops:        ****until a condition is true****
+
+until [ tests ]
+do
+  commands
+done
+___________________________________________________________________________________________
+
+Break:
+
+breaks out of a loop
+___________________________________________________________________________________________
+
+Continue:
+
+continues past... basically a place holder that allows the code to continue without errors
